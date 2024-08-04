@@ -1,0 +1,14 @@
+version: '3.8'
+name: notes-infra
+services:
+  mysql:
+    image: mysql:latest
+    restart: always
+    environment:
+      - MYSQL_DATABASE=reservas
+      - MYSQL_ROOT_PASSWORD=mauFsdas
+    ports:
+      - '3306:3306'
+volumes:
+  test_vol:
+    driver: local
